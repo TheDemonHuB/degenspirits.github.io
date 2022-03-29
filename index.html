@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="sty.css ">
+   </head>  
+   <style>
+
+
+body {
+background: linear-gradient(-45deg, #718bd3, #51f5d1, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+height: 100vh;
+}
+
+@keyframes gradient {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+</style>
+<body>
+  <div class="sbar" id="Sidebar" >
+    <ul class ="navbarulist" >
+      <li id = "sidebarlist" class="active">Home</li>
+      <li id = "sidebarlist">Launchpad</li>
+      <li id = "sidebarlist">Booklaunchpad</li>
+      <li id = "sidebarlist">Pricing</li> 
+      <li id = "sidebarlist">Faqs</li>
+      <li id = "sidebarlist">Partners</li>
+      <li id = "sidebarlist">Contact us</li>
+    </ul>
+  </div>
+   <div class="slideshow" >
+      <div class="countdown">
+        <p id="countdowntime"></p>
+
+
+     </div>
+     <div class="slideshowimg">
+    <img class="mySlides mySlidesanimation" src="https://pbs.twimg.com/profile_banners/1503618443391741954/1647895576/600x200" ></img>
+    <img class="mySlides mySlidesanimation" src="https://pbs.twimg.com/profile_banners/1501512389925412866/1646911993/600x200" ></img>
+    <img class="mySlides mySlidesanimation" src="https://pbs.twimg.com/profile_banners/1444247917397688320/1645527120/600x200"></img>
+    </div>
+    <div class="badgestyle">
+    <span class="badge activebadge" onclick="currentDiv(1)"></span>
+    <span class="badge activebadge" onclick="currentDiv(2)"></span>
+    <span class="badge activebadge" onclick="currentDiv(3)"></span>
+    </div>
+    </div>
+
+  <div class="menu-wrapper">
+    <h1>Upcoming Launces</h1>
+    <div class="menu">
+      <div class="item"><img class="itemimg" src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" style="width:100%">
+      <div class="textbelowitemimg">
+          <span>John Doe</span>
+          </div>
+        
+      </div>
+      <div class="item"><img class="itemimg" src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/dl.airtable.com/.attachmentThumbnails/483970a827af847e0b031c7d90d70baf/6cc644f1" style="width:100%">
+        <div class="textbelowitemimg">
+            <span>John Doe</span>
+            </div>
+          </div>
+        <div class="item"><img class="itemimg" src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/dl.airtable.com/.attachmentThumbnails/146dc4f62a20feea3f6304a87115cd4b/ad5c8354" style="width:100%">
+            <div class="textbelowitemimg">
+                <span>John Doe</span>
+            </div>
+          </div>
+
+          <div class="item"><img class="itemimg" src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/cats_on_crack_pfp_1644850873089.png" style="width:100%">
+            <div class="textbelowitemimg">
+                <span>John Doe</span>
+            </div>  
+          </div>
+          <div class="item"><img class="itemimg" src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/i.imgur.com/2kWcR3L.jpg" style="width:100%">
+            <div class="textbelowitemimg">
+                <span>John Doe</span>
+              </div>
+            </div>
+    </div>
+    
+      <div class="paddles">
+        <button class="left-paddle paddle hidden">
+          <
+        </button>
+        <button class="right-paddle paddle">
+          >
+        </button>
+      </div>
+
+  </div>
+
+  <script>
+    let items = document.querySelectorAll('#sidebarlist');
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+     items.forEach(item => item.classList.remove('active'))
+      item.classList.add('active')
+    
+  })
+})
+
+
+    </script>
+
+<script>
+ //coutdown
+ var mintdate = new Date("march 30,2022 15:30:00").getTime();
+ var x = setInterval(function(){
+   var current = new Date().getTime();
+   var tremain = mintdate - current;
+   var days = Math.floor(tremain / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((tremain % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((tremain % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((tremain % (1000 * 60)) / 1000);
+  document.getElementById("countdowntime").innerHTML = days + "D " + hours + "H " + minutes +"M " +
+  seconds + "S ";
+  if (tremain<0)
+  {
+    clearInterval(x);
+    document.getElementById("countdowntime").innerHTML = "Expired" ;
+  }},1000);
+  
+  //slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("badge");
+  for(i=0;i<x.length;i++)
+  {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("activebadge", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " activebadge";
+}
+
+  
+</script>
+    <script>
+// duration of scroll animation
+var scrollDuration = 300;
+// paddles
+var leftPaddle = document.getElementsByClassName('left-paddle');
+var rightPaddle = document.getElementsByClassName('right-paddle');
+// get items dimensions
+var itemsLength = $('.item').length;
+var itemSize = $('.item').outerWidth(true);
+// get some relevant size for the paddle triggering point
+var paddleMargin = 20;
+
+// get wrapper width
+var getMenuWrapperSize = function() {
+	return $('.menu-wrapper').outerWidth();
+}
+var menuWrapperSize = getMenuWrapperSize();
+// the wrapper is responsive
+$(window).on('resize', function() {
+	menuWrapperSize = getMenuWrapperSize();
+});
+// size of the visible part of the menu is equal as the wrapper size 
+var menuVisibleSize = menuWrapperSize;
+
+// get total width of all menu items
+var getMenuSize = function() {
+	return itemsLength * itemSize;
+};
+var menuSize = getMenuSize();
+// get how much of menu is invisible
+var menuInvisibleSize = menuSize - menuWrapperSize;
+
+// get how much have we scrolled to the left
+var getMenuPosition = function() {
+	return $('.menu').scrollLeft();
+};
+
+// finally, what happens when we are actually scrolling the menu
+$('.menu').on('scroll', function() {
+
+	// get how much of menu is invisible
+	menuInvisibleSize = menuSize - menuWrapperSize;
+	// get how much have we scrolled so far
+	var menuPosition = getMenuPosition();
+
+	var menuEndOffset = menuInvisibleSize - paddleMargin;
+
+	// show & hide the paddles 
+	// depending on scroll position
+	if (menuPosition <= paddleMargin) {
+		$(leftPaddle).addClass('hidden');
+		$(rightPaddle).removeClass('hidden');
+	} else if (menuPosition < menuEndOffset) {
+		// show both paddles in the middle
+		$(leftPaddle).removeClass('hidden');
+		$(rightPaddle).removeClass('hidden');
+	} else if (menuPosition >= menuEndOffset) {
+		$(leftPaddle).removeClass('hidden');
+		$(rightPaddle).addClass('hidden');
+}
+
+	// print important values
+	$('#print-wrapper-size span').text(menuWrapperSize);
+	$('#print-menu-size span').text(menuSize);
+	$('#print-menu-invisible-size span').text(menuInvisibleSize);
+	$('#print-menu-position span').text(menuPosition);
+
+});
+
+// scroll to left
+$(rightPaddle).on('click', function() {
+	$('.menu').animate( { scrollLeft: menuInvisibleSize}, scrollDuration);
+});
+
+// scroll to right
+$(leftPaddle).on('click', function() {
+	$('.menu').animate( { scrollLeft: '0' }, scrollDuration);
+});
+    </script>
+    
+    </body>
+</html>
