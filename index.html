@@ -9,6 +9,7 @@
 
 
 body {
+  margin: 0;
 background: linear-gradient(-45deg, #718bd3, #51f5d1, #23a6d5, #23d5ab);
 background-size: 400% 400%;
 animation: gradient 15s ease infinite;
@@ -28,6 +29,30 @@ background-position: 0% 50%;
 }
 </style>
 <body>
+
+  <div class="header">
+    <div id="snav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Launchpad</a>
+      <a href="#">Booklaunchpad</a>
+      <a href="#">Pricing</a>
+      <a href="#">faqs</a>
+      <a href="#"> Contact us</a>
+    </div>
+    
+    <span class="opensbar" onclick="openNav()">&#x2630; </span>
+
+    <a href="#default" class="logo">Logohere</a>
+    <div class="header-right">
+    <a class="active" href="#link">Home</a>
+    <a href="#link">About</a>
+    <a href="#link">Contact</a>
+    </div>
+    
+  </div>
+
+  
+
   <!-- <div class="sbar" id="Sidebar" >
     <ul class ="navbarulist" >
       <li id = "sidebarlist" class="active">Home</li>
@@ -45,135 +70,122 @@ background-position: 0% 50%;
       <span class="badge activebadge" onclick="currentDiv(2)"></span>
       <span class="badge activebadge" onclick="currentDiv(3)"></span>
       </div>
-      <div class="countdown">
-        <p id="countdowntime"></p>
-
-
-     </div>
+      
      <div class="slideshowimg">
       
     <img class="mySlides mySlidesanimation" src="https://pbs.twimg.com/profile_banners/1503618443391741954/1647895576/600x200" ></img>
     <img class="mySlides mySlidesanimation" src="https://pbs.twimg.com/profile_banners/1501512389925412866/1646911993/600x200" ></img>
     <img class="mySlides mySlidesanimation" src="https://pbs.twimg.com/profile_banners/1444247917397688320/1645527120/600x200"></img>
     </div>
+
+    <div class="countdown">
+      <p id="countdowntime"></p>
+
+
+   </div>
     
     </div>
-<div>
+
+<div class="gallerystyle">
   <h2>Upcoming Projects</h2>
-<div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+    </div>
   
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://cdn.magiceden.io/rs:fill:252:189:0:0/plain/https:/creator-hub-prod.s3.us-east-2.amazonaws.com/drippies_pfp_1646848418916.gif" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
 </div>
+  
+  
+  
+
+<script>
+  //snav
+  function openNav() {
+    document.getElementById("snav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("snav").style.width = "0";
+  }
+  </script>
 
 
   <!-- <div class="menu-wrapper">
