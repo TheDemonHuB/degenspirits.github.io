@@ -179,7 +179,7 @@ span.opensbar{
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  
+  justify-content: center; 
 	height: auto ;
   width: auto;
    /* border: 1px solid black; */
@@ -188,26 +188,48 @@ span.opensbar{
 
 @media (min-width: 800px) {
 
+
   .slideshow{
     border: 1px solid black;
     
     justify-content: center;
-
-
-       
     
-
   }
   
+  .slideshowimg{  
+    margin: 10px 5px 15px 20px;
+  }  
      
   }
-     
+ 
+  @media (max-width: 800px){
+    .slideshow{
+      flex-direction: column;
+      
+    }
 
+    .slideshowimg{  
+      margin: 15px 10px;
+    }  
+    .badgestyle{
+      order: 3;
+
+    }
+
+    .slideshowimg{
+      order: 2;
+
+    }
+
+    .countdown{
+      order: 1;
+    }
+  }
   
 
 
 .slideshowimg{  
-  margin: 10px 5px 15px 20px;
+  
    /* border: 1px solid black;  */
   width:auto;
   height: auto;
@@ -224,7 +246,7 @@ span.opensbar{
   {from{opacity:0} to{opacity:1}}
 
 .badgestyle{ 
-  margin: 10px 100px 15px 20px;
+  
   width:10px ;
 }
 
@@ -240,19 +262,41 @@ span.badge{
   border-radius: 15px;
 }
 
+@media (min-width:800px) {
+  .badgestyle{ 
+    margin: 10px 100px 15px 20px;
+}
+}
 @media (max-width: 800px){
   span.badge{
     width: 40px;
     height: 40px;
   }
+
+  .badgestyle{
+    width: auto;
+    margin-top: 10px;
+  }
 }
 
 .countdown{
-  margin: 50px 50px 15px 20px;
+  
   border: 1px solid black;  
   width: auto;
   height: auto;
 
+}
+
+@media  (min-width:800px){
+  .countdown{ 
+    margin: 10px 100px 15px 20px;
+  }
+}
+
+@media (max-width:800px) {
+  .countdown{
+    margin-top:  20px;
+  }
 }
 
 
